@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 import javax.persistence.*;
 
 @Getter
+@NoArgsConstructor
 @Entity
 public class ClinicHeart extends BaseTimeEntity {
 
@@ -29,9 +30,10 @@ public class ClinicHeart extends BaseTimeEntity {
     private ClinicPost clinicPost;
 
     @Builder
-    public ClinicHeart() {
+    public ClinicHeart(Long id) {
+        this.id = id;
         this.user.addClinicHeart(this);
-        this.clinicPost.addClinicPost(this);
+        this.clinicPost.addClinicHeart(this);
     }
 
 }

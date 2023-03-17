@@ -49,7 +49,7 @@ public class FeelingPost extends BaseTimeEntity {
         this.id = id;
         this.feeling = feeling;
         this.content = content;
-        this.user.addFeelingPost(this);
+//        this.user.addFeelingPost(this);
     }
 
 

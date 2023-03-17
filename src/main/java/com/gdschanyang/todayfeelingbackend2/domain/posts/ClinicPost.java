@@ -42,10 +42,10 @@ public class ClinicPost extends BaseTimeEntity {
         this.id = id;
         this.title = title;
         this.content = content;
-        this.user.addClinicPost(this);
+//        this.user.addClinicPost(this);
     }
 
-    public void addClinicPost(ClinicHeart clinicHeart){
+    public void addClinicHeart(ClinicHeart clinicHeart){
         this.clinicHearts.add(clinicHeart);
     }
 

@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RequiredArgsConstructor
-@Controller
+@RestController
 public class ClinicPostController {
 
     private final ClinicPostService clinicPostService;
 
-    @GetMapping("/api/clinicpost")
+    @PostMapping("/api/clinicpost")
     public void save(@RequestBody ClinicPostSaveRequestDto requestDto) {
         clinicPostService.save(requestDto);
     }

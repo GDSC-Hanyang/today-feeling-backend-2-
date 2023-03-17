@@ -11,12 +11,12 @@ import org.springframework.web.bind.annotation.*;
 
 
 @RequiredArgsConstructor
-@Controller
+@RestController
 public class FeelingPostController {
 
     private final FeelingPostService feelingPostService;
 
-    @GetMapping("/api/feelingpost")
+    @PostMapping("/api/feelingpost")
     public void save(@RequestBody FeelingPostSaveRequestDto requestDto) {
         feelingPostService.save(requestDto);
     }
